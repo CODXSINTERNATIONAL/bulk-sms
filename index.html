@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk SMS Sender</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bulk SMS Sender</h1>
+        <form id="smsForm">
+            <input type="text" id="senderId" placeholder="Sender ID" required>
+            <input type="text" id="entityId" placeholder="Entity ID" required>
+            <input type="text" id="templateId" placeholder="Template ID" required>
+            <textarea id="message" placeholder="Message" required></textarea>
+            <input type="file" id="fileInput" accept=".csv,.xlsx" required>
+            <button type="submit">Send SMS</button>
+        </form>
+        <button id="checkBalance">Check Wallet Balance</button>
+        <div id="response"></div>
+        <div id="balance"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
